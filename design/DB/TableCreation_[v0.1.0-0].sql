@@ -1,17 +1,17 @@
 create table User (
-    User_ID integer identity(1, 1) primary key,
+    User_ID integer not null unique primary key,
     Username varchar(32) not null unique,
     PasswordHash binary(32) not null
 );
 
 create table FileType (
-    FileType_ID integer identity(1, 1) primary key,
+    FileType_ID integer not null unique primary key,
     Name varchar(32) not null,
     Extension varchar(16) not null unique
 );
 
 create table File (
-    File_ID integer identity(1, 1) primary key,
+    File_ID integer not null unique primary key,
     AbsolutePath varchar(4096) not null unique,
     Size integer not null,
 
@@ -23,12 +23,12 @@ create table File (
 );
 
 create table PrintJobStatus (
-    PrintJobStatus_ID integer identity(1, 1) primary key,
+    PrintJobStatus_ID integer not null unique primary key,
     Name varchar(32) not null unique
 );
 
 create table PrintJob (
-    PrintJob_ID integer identity(1, 1) primary key,
+    PrintJob_ID integer not null unique primary key,
     Is_Color binary not null,
     Num_Copies integer not null,
 
@@ -40,12 +40,12 @@ create table PrintJob (
 );
 
 create table PrinterStatus (
-    PrinterStatus_ID integer identity(1, 1) primary key,
+    PrinterStatus_ID integer not null unique primary key,
     Name varchar(32) not null unique
 );
 
 create table Printer (
-    Printer_ID integer identity(1, 1) primary key,
+    Printer_ID integer not null unique primary key,
     Name varchar(64) not null unique,
     Address varchar(15) not null unique,
 

@@ -1,0 +1,26 @@
+ - Add column to file to enable scans
+ - Remove column for file path, since this can be managed by the server
+ - Add column to job to mark last update datetime
+ - Update ER
+ - Rebuild DB
+ - Research supported file types
+   * Add supported file types to DB
+ - Add all printjob states to DB
+ - Research printer status'
+   * Add them to DB
+ - Enter Test Data
+ - Improve personal SQL library
+   * Test library with basic queries
+ - Write Queries:
+   * Get all print jobs for a given username
+   * Queries for updating print job states
+   * Adding a print job
+   * adding a file
+   * if all jobs for a given file are marked as "complete", remove all such jobs and remove the file if it isn't marked as "scanned".
+   * getting all jobs with state "printing", regardless of owner
+   * get the most recent job to be marked with "to be printed".
+   * 
+ - Test queries on test data
+ - Formulate some kind of query encryption
+   * Update SQL library to support encrypted forms
+   * Test new library and test queries for correctness

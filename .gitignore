@@ -93,3 +93,6 @@ fabric.properties
 *.html
 *.MF
 *.dia~
+
+# DB Files
+*.sqlite
